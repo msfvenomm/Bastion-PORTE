@@ -45,3 +45,54 @@ Rôles attribués :
 - Jhamal le Rempart
 - Eden le Gardien
 - Noham le Passeur
+
+
+**Mise en place de la porte : SSH** (étape par étape)
+
+Sécuriser le serveur SSH en 5 étapes.
+
+## 1. Installer SSH
+
+```bash
+sudo apt install openssh-server
+
+```
+
+## 2. Générer une clef ssh 
+```bash
+ssh-keygen -t ed25519 -f ~/.ssh/id_ed25519 -N ""
+
+```
+
+##. 3. Ajouter la clé publique
+```bash
+mkdir -p ~/.ssh
+cat ~/.ssh/id_ed25519.pub >> ~/.ssh/authorized_keys
+chmod 600 ~/.ssh/authorized_keys
+
+```
+## 4. Sécuriser la config SSH
+Éditer /etc/ssh/sshd_config :
+
+```bash
+PermitRootLogin no
+PasswordAuthentication no
+PubkeyAuthentication yes
+```
+
+Redémarrer :
+
+```bash
+sudo systemctl restart ssh
+
+```
+## 5. Limiter les tentatives
+
+```bash
+sudo apt install fail2ban
+```
+Tester
+
+```bash
+ssh localhost
+```
