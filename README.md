@@ -10,7 +10,7 @@ chmod +x menu.sh scripts/*.sh boss/*.sh
 ./menu.sh
 ```
 
-Choix 5 : installer la borne (Internet requis, 10 min)
+Choix 5 : installer la borne
 Choix 6 : allumer la borne
 Choix 8 : voir ce qui va pas
 
@@ -28,7 +28,7 @@ Objectif : 9/9 repoussées et score 100/100 au bilan.
 
 - Mot de passe root fort
 - SSH par clé (pas de mots de passe)
-- Wi-Fi principal : WPA3 + clé 12+ caractères
+- Wi-Fi principal : WPA3 + clé de 12 caractères
 - Wi-Fi guest complètement isolé
 - HTTPS sur l'interface
 - Firewall bien configuré
@@ -37,5 +37,5 @@ Chaque problème du bilan te dit exactement quoi faire.
 
 ## Besoin d'aide
 
-Si tu casses la borne : choix 10 la remet en usine.
-Les mots de passe sont dans `sauvegardes/` (ne pas commiter).
+Si tu casses la borne : choix 10 tu la remets en usine.
+Les mots de passe sont dans `sauvegardes/` (ne pas commit).
