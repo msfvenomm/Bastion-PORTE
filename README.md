@@ -39,3 +39,9 @@ Chaque problème du bilan te dit exactement quoi faire.
 
 Si tu casses la borne : choix 10 tu la remets en usine.
 Les mots de passe sont dans `sauvegardes/` (ne pas commit).
+
+Rôles attribués : 
+- Elias Chef de guilde
+- Jhamal le Rempart
+- Eden le Gardien
+- Noham le Passeur
